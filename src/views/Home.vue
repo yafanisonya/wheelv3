@@ -1,8 +1,11 @@
 <template>
   <div>
     <div class="topnav">
-      <div class="logo"></div>
-      <div class="menu"></div>
+      <div class="logo">LOGO</div>
+      <ul class="menu">
+        <li>菜单1</li>
+        <li>菜单2</li>
+      </ul>
     </div>
     <div class="banner">
       <h1>轱辘UI</h1>
@@ -17,6 +20,23 @@
 
 <style lang="scss" scoped>
 .topnav{
-  border:1px solid red;
+  display: flex;
+  padding:16px;
+  background:pink;
+
+  > .logo{
+    margin-right:auto;
+    max-width:6em;
+  }
+
+  > .menu{
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+
+    > li{
+      margin: 0 1em;
+    }
+  }
 }
 </style>
