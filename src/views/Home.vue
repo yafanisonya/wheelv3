@@ -1,28 +1,51 @@
 <template>
   <div>
-    <Topnav/>
+    <Topnav />
     <div class="banner">
       <h1>轱辘UI</h1>
       <h2>一个厉害的 UI 框架</h2>
       <p class="actions">
-        <a href="">Github</a>
-        <a href="">开始</a>
+        <a href="https://github.com">Github</a>
+        <router-link to="/doc">开始</router-link>
       </p>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import Topnav from '../components/Topnav.vue'
+import Topnav from "../components/Topnav.vue";
 
 export default {
-  name:'Home',
-  components:{
-    Topnav
-  }
-}
+  name: "Home",
+  components: {
+    Topnav,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
+  padding: 100px 0;
+  background: lightgreen;
+
+  > .actions {
+    padding: 8px 0;
+
+    a {
+      display: inline-block;
+      margin: 0 8px;
+      padding: 0 8px;
+      $h: 28px;
+      height: $h;
+      line-height: $h;
+      border-radius: $h/2;
+      background: #fff;
+    }
+  }
+}
 </style>
