@@ -88,18 +88,16 @@ $radius: 4px;
     }
   }
 
-  &.gulu-theme-button {
-    &.gulu-size-big {
-      padding: 0 16px;
-      height: 48px;
-      font-size: 24px;
-    }
+  &.gulu-size-big {
+    padding: 0 16px;
+    height: 48px;
+    font-size: 24px;
+  }
 
-    &.gulu-size-small {
-      padding: 0 4px;
-      height: 20px;
-      font-size: 12px;
-    }
+  &.gulu-size-small {
+    padding: 0 4px;
+    height: 20px;
+    font-size: 12px;
   }
 }
 </style>
