@@ -67,9 +67,10 @@ export default {
     };
 
     const ok = () => {
-      if (props.ok?.() !== false) {
-        close();
-      }
+      // if (props.ok?.() !== false) {
+      //   close();
+      // }
+      close();
     };
 
     const cancel = () => {
