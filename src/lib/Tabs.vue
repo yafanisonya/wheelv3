@@ -18,11 +18,16 @@
       ></div>
     </div>
     <div class="gulu-tabs-content">
-      <component
+      <!-- <component
         class="gulu-tabs-content-item"
         :class="{selected: c.props.title === selected}"
         v-for="c in defaults"
         :is="c"
+      /> -->
+
+      <component
+        :is="current"
+        :key="current.props.title"
       />
     </div>
   </div>
@@ -30,7 +35,7 @@
 
 <script lang="ts">
 import Tab from "./Tab.vue";
-import { ref, watchEffect, onMounted } from "vue";
+import { computed, ref, watchEffect, onMounted } from "vue";
 
 export default {
   props: {
@@ -61,6 +66,10 @@ export default {
       }
     });
 
+    const current = computed(() => {
+      return defaults.find((tag) => tag.props.title === props.selected);
+    });
+
     const titles = defaults.map((tag) => {
       return tag.props.title;
     });
@@ -76,6 +85,7 @@ export default {
       selectedItem,
       indicator,
       container,
+      current,
     };
   },
 };
