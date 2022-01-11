@@ -5,7 +5,7 @@
       class="logo"
     >
       <svg class="icon">
-        <use xlink:href="#icon-king"></use>
+        <use xlink:href="#icon-fantuan"></use>
       </svg>
     </router-link>
     <ul class="menu">

@@ -74,7 +74,7 @@ export default {
     };
 
     const onClickCancel = () => {
-      props.cancel?.();
+      // props.cancel?.();
       close();
     };
 
