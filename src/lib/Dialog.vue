@@ -20,9 +20,9 @@
           <footer>
             <Button
               level="main"
-              @click="ok"
+              @click="onClickOk"
             >Ok</Button>
-            <Button @click="cancel">Cancel</Button>
+            <Button @click="onClickCancel">Cancel</Button>
           </footer>
         </div>
       </div>
@@ -66,14 +66,14 @@ export default {
       }
     };
 
-    const ok = () => {
+    const onClickOk = () => {
       // if (props.ok?.() !== false) {
       //   close();
       // }
       close();
     };
 
-    const cancel = () => {
+    const onClickCancel = () => {
       props.cancel?.();
       close();
     };
@@ -81,8 +81,8 @@ export default {
     return {
       close,
       onClickOverlay,
-      ok,
-      cancel,
+      onClickOk,
+      onClickCancel,
     };
   },
 };
